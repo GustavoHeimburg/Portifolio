@@ -8,10 +8,10 @@ export default function Contact() {
             </p>
 
             <a
-                href="https://wa.me/seunumero"
+                href="https://wa.me/SEUNUMERO"
                 className="bg-white text-black px-6 py-3 rounded-full hover:scale-105 transition"
             >
-                Falar no WhatsApp
+                Solicitar orçamento
             </a>
         </section>
     );
