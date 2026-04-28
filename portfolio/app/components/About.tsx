@@ -1,12 +1,41 @@
 export default function About() {
     return (
-        <section className="max-w-4xl mx-auto py-20 px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Sobre mim</h2>
-            <p className="text-gray-400">
-                Sou desenvolvedor focado em criar experiências modernas com React,
-                TypeScript e Tailwind. Meu objetivo é construir interfaces que não só
-                sejam bonitas, mas que convertam.
-            </p>
+        <section className="max-w-5xl mx-auto py-28 px-4">
+
+            {/* layout em 2 colunas */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+
+                {/* lado esquerdo */}
+                <div>
+                    <p className="text-sm text-gray-500 mb-4 uppercase tracking-widest">
+                        Sobre
+                    </p>
+
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Eu não faço só sites.
+                        <span className="block text-gray-400">
+              Eu construo experiências digitais.
+            </span>
+                    </h2>
+                </div>
+
+                {/* lado direito */}
+                <div>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                        Sou desenvolvedor frontend focado em criar interfaces modernas,
+                        rápidas e com propósito. Meu trabalho vai além do visual —
+                        eu penso em performance, experiência do usuário e resultado.
+                    </p>
+
+                    <p className="text-gray-500 leading-relaxed">
+                        Utilizo tecnologias como React, TypeScript e Tailwind para
+                        desenvolver projetos que parecem produtos reais, não apenas
+                        páginas comuns.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
     );
 }

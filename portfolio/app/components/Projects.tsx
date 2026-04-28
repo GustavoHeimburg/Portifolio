@@ -1,30 +1,90 @@
 const projects = [
     {
-        title: "Landing Page Moderna",
-        description: "Página focada em conversão com design profissional",
+        title: "Landing page LISSE LASER",
+        description:
+            "Lading page integrado com sistema de vendas online e edição de protudos",
+        tech: ["HTML", "CSS", "JAVASCRIPT", "PHP"],
+        color: "from-green-600 to-green-800",
+        year: "2026",
+        type: "WEB",
     },
     {
-        title: "E-commerce UI",
-        description: "Interface moderna para loja virtual",
+        title: "Saas vendas LISSE",
+        description:
+            "Landing page corporativa para empresa industrial com foco em geração de leads.",
+        tech: ["HTML", "TAILWIND CSS", "JAVASCRIPT", "PHP"],
+        color: "from-blue-600 to-blue-800",
+        year: "2026",
+        type: "WEB",
+    },
+    {
+        title: "Enterprise Platform",
+        description:
+            "Sistema SaaS para gestão empresarial com dashboard completo e múltiplos usuários.",
+        tech: ["React", "Node", "MongoDB"],
+        color: "from-purple-600 to-purple-800",
+        year: "2025",
+        type: "WEB",
+    },
+    {
+        title: "Design System UI",
+        description:
+            "Biblioteca de componentes reutilizáveis com foco em consistência e escalabilidade.",
+        tech: ["Figma", "React"],
+        color: "from-pink-600 to-pink-800",
+        year: "2024",
+        type: "UI",
     },
 ];
 
 export default function Projects() {
     return (
-        <section id="projects" className="max-w-6xl mx-auto py-20 px-4">
-            <h2 className="text-3xl font-bold mb-10 text-center">Projetos</h2>
+        <section id="projects" className="max-w-6xl mx-auto py-28 px-4">
 
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* título */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-white text-center">
+                Projetos
+            </h2>
+
+            {/* grid */}
+            <div className="grid md:grid-cols-2 gap-10">
                 {projects.map((p, i) => (
-                    <div
-                        key={i}
-                        className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 transition"
-                    >
-                        <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                        <p className="text-gray-400">{p.description}</p>
+                    <div key={i} className="group cursor-pointer">
+
+                        <div
+                            className={`h-56 rounded-xl mb-6 bg-gradient-to-r ${p.color} relative overflow-hidden`}
+                        >
+                            <span className="absolute top-3 left-3 text-xs px-2 py-1 bg-black/40 text-white">
+                {p.type}
+              </span>
+
+                            <span className="absolute top-3 right-3 text-xs text-white/70">
+                {p.year}
+              </span>
+
+                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition"></div>
+                        </div>
+
+                        <h3 className="text-xl font-bold text-white mb-2">
+                            {p.title}
+                        </h3>
+
+                        <p className="text-gray-400 mb-4">
+                            {p.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 text-xs text-gray-500">
+                            {p.tech.map((t, index) => (
+                                <span key={index} className="border border-gray-700 px-2 py-1">
+                  {t}
+                </span>
+                            ))}
+                        </div>
+
                     </div>
                 ))}
             </div>
+
         </section>
     );
 }

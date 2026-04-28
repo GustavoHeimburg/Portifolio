@@ -1,56 +1,85 @@
 import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
+
 export default function Hero() {
     return (
-        <section className="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
+        <section className="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden bg-[#0a0a0a]">
 
-
-            <div className="absolute top-20 left-10 text-blue-500 text-4xl animate-float pointer-events-none">
+            {/* ICONES FLUTUANTES */}
+            <div className="absolute top-20 left-10 text-blue-500 text-4xl opacity-60 animate-float">
                 <FaReact />
             </div>
 
-            <div className="absolute bottom-20 right-10 text-blue-600 text-4xl animate-floatSlow pointer-events-none">
+            <div className="absolute bottom-20 right-10 text-blue-600 text-4xl opacity-60 animate-floatSlow">
                 <SiTypescript />
             </div>
 
-            <div className="absolute top-40 right-20 text-cyan-500 text-4xl animate-float pointer-events-none">
+            <div className="absolute top-40 right-20 text-cyan-500 text-4xl opacity-60 animate-float">
                 <SiTailwindcss />
             </div>
 
-            <div className="absolute bottom-32 left-20 text-orange-500 text-4xl animate-floatSlow pointer-events-none">
+            <div className="absolute bottom-32 left-20 text-orange-500 text-4xl opacity-60 animate-floatSlow">
                 <FaHtml5 />
             </div>
 
-            <div className="absolute top-60 left-1/3 text-blue-400 text-4xl animate-float pointer-events-none">
+            <div className="absolute top-60 left-1/3 text-blue-400 text-4xl opacity-60 animate-float">
                 <FaCss3Alt />
             </div>
 
-            <div className="absolute bottom-40 right-1/3 text-yellow-400 text-4xl animate-floatSlow pointer-events-none">
+            <div className="absolute bottom-40 right-1/3 text-yellow-400 text-4xl opacity-60 animate-floatSlow">
                 <FaJs />
             </div>
 
-            <div className="bg-shape shape1 animate-float -z-10"></div>
-            <div className="bg-shape shape2 animate-floatSlow -z-10"></div>
+            {/* GLOW DE FUNDO */}
+            <div className="absolute w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
-            <div className="z-10 animate-fadeIn">
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Sites modernos que
-                    <span className="block text-blue-500">
-            geram resultado
+            {/* CONTEÚDO */}
+            <div className="z-10 max-w-3xl">
+
+                {/* TAG */}
+                <p className="text-sm text-gray-500 mb-4 tracking-widest uppercase">
+                    Frontend Developer
+                </p>
+
+                {/* TÍTULO */}
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+                    Interfaces que parecem
+                    <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            produto real
           </span>
                 </h1>
 
-                <p className="text-gray-500 mb-8 max-w-xl mx-auto">
-                    Desenvolvimento de interfaces rápidas, bonitas e focadas em conversão.
+                {/* DESCRIÇÃO */}
+                <p className="text-gray-400 mb-10 max-w-xl mx-auto">
+                    Crio experiências modernas, rápidas e pensadas para conversão.
+                    Nada de layouts genéricos — foco em resultado.
                 </p>
 
-                <a
-                    href="#projects"
-                    className="bg-blue-500 text-white px-6 py-3 rounded-full
-          hover:scale-105 hover:bg-blue-600 transition-all duration-300 shadow-md"
-                >
-                    Ver projetos
-                </a>
+                {/* BOTÕES */}
+                <div className="flex justify-center gap-4 flex-wrap">
+
+                    <a
+                        href="#projects"
+                        className="px-8 py-4 rounded-full
+            bg-gradient-to-r from-blue-500 to-purple-500
+            text-white font-medium
+            transition-all duration-300
+            hover:scale-105 hover:shadow-lg"
+                    >
+                        Ver projetos
+                    </a>
+
+                    <a
+                        href="#contact"
+                        className="px-8 py-4 rounded-full
+            border border-gray-700 text-gray-300
+            hover:bg-white hover:text-black
+            transition-all duration-300"
+                    >
+                        Falar comigo
+                    </a>
+
+                </div>
             </div>
         </section>
     );
