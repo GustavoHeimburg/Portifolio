@@ -22,8 +22,7 @@ export default function Services() {
                 {services.map((s, i) => (
                     <div
                         key={i}
-                        className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 transition"
-                    >
+                        className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 transition">
                         <h3 className="text-xl font-bold mb-2">{s.title}</h3>
                         <p className="text-gray-400">{s.desc}</p>
                     </div>
