@@ -18,10 +18,10 @@ const projects = [
         type: "WEB",
     },
     {
-        title: "Enterprise Platform",
+        title: "Vida Laches - Landing Page",
         description:
-            "Sistema SaaS para gestão empresarial com dashboard completo e múltiplos usuários.",
-        tech: ["React", "Node", "MongoDB"],
+            "lading page com sistema de agendamentos via Whatsapp",
+        tech: ["TYPESCRIPT", "NODE", "JAVASCRIPT"],
         color: "from-purple-600 to-purple-800",
         year: "2025",
         type: "WEB",
