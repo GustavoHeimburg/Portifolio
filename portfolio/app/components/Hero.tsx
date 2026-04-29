@@ -5,7 +5,6 @@ export default function Hero() {
     return (
         <section className="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden bg-[#0a0a0a]">
 
-            {/* ICONES FLUTUANTES */}
             <div className="absolute top-20 left-10 text-blue-500 text-4xl opacity-60 animate-float">
                 <FaReact />
             </div>
@@ -30,18 +29,14 @@ export default function Hero() {
                 <FaJs />
             </div>
 
-            {/* GLOW DE FUNDO */}
             <div className="absolute w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
-            {/* CONTEÚDO */}
             <div className="z-10 max-w-3xl">
 
-                {/* TAG */}
                 <p className="text-sm text-gray-500 mb-4 tracking-widest uppercase">
                     Frontend Developer
                 </p>
 
-                {/* TÍTULO */}
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
                     Interfaces que parecem
                     <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -49,13 +44,11 @@ export default function Hero() {
           </span>
                 </h1>
 
-                {/* DESCRIÇÃO */}
                 <p className="text-gray-400 mb-10 max-w-xl mx-auto">
                     Crio experiências modernas, rápidas e pensadas para conversão.
                     Nada de layouts genéricos — foco em resultado.
                 </p>
 
-                {/* BOTÕES */}
                 <div className="flex justify-center gap-4 flex-wrap">
 
                     <a

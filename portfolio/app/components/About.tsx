@@ -2,10 +2,8 @@ export default function About() {
     return (
         <section className="max-w-5xl mx-auto py-28 px-4">
 
-            {/* layout em 2 colunas */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
 
-                {/* lado esquerdo */}
                 <div>
                     <p className="text-sm text-gray-500 mb-4 uppercase tracking-widest">
                         Sobre
@@ -19,7 +17,6 @@ export default function About() {
                     </h2>
                 </div>
 
-                {/* lado direito */}
                 <div>
                     <p className="text-gray-400 mb-6 leading-relaxed">
                         Sou desenvolvedor frontend focado em criar interfaces modernas,

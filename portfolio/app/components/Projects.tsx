@@ -41,12 +41,10 @@ export default function Projects() {
     return (
         <section id="projects" className="max-w-6xl mx-auto py-28 px-4">
 
-            {/* título */}
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-white text-center">
                 Projetos
             </h2>
 
-            {/* grid */}
             <div className="grid md:grid-cols-2 gap-10">
                 {projects.map((p, i) => (
                     <div key={i} className="group cursor-pointer">

@@ -4,12 +4,10 @@ export default function Contact() {
             id="contact"
             className="py-32 px-4 text-center relative"
         >
-            {/* título */}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Vamos criar algo juntos?
             </h2>
 
-            {/* descrição */}
             <p className="text-gray-400 mb-10 max-w-xl mx-auto">
                 Se você precisa de um site moderno, rápido e que realmente gere resultado,
                 me chama que eu te mostro como podemos construir isso.
