@@ -57,7 +57,7 @@ export default function Hero() {
             bg-gradient-to-r from-blue-500 to-purple-500
             text-white font-medium
             transition-all duration-300
-            hover:scale-105 hover:shadow-lg"
+            hover:scale-105 active:scale-95"
                     >
                         Ver projetos
                     </a>

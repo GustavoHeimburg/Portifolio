@@ -14,13 +14,13 @@ export default function Contact() {
             </p>
 
             <a
-                href="https://wa.me/554999806435"
+                href="https://wa.me/5549998063465"
                 target="_blank"
                 className="inline-block px-8 py-4 rounded-full
         bg-gradient-to-r from-blue-500 to-purple-500
         text-white font-medium
         transition-all duration-300
-        hover:scale-105 hover:shadow-lg"
+        hover:scale-105 active:scale-95"
             >
                 Falar comigo →
             </a>

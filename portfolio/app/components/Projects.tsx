@@ -47,12 +47,12 @@ export default function Projects() {
 
             <div className="grid md:grid-cols-2 gap-10">
                 {projects.map((p, i) => (
-                    <div key={i} className="group cursor-pointer">
+                    <div key={i} className="group cursor-pointer transition-all duration-300 hover:-translate-y-2">
 
                         <div
-                            className={`h-56 rounded-xl mb-6 bg-gradient-to-r ${p.color} relative overflow-hidden`}
+                            className={`h-56 rounded-xl mb-6 bg-gradient-to-r ... overflow-hidden`}
                         >
-                            <span className="absolute top-3 left-3 text-xs px-2 py-1 bg-black/40 text-white">
+                            <span className="w-full h-full group-hover:scale-105 transition duration-500">
                 {p.type}
               </span>
 
@@ -63,7 +63,7 @@ export default function Projects() {
                             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition"></div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-white mb-2">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition">
                             {p.title}
                         </h3>
 
