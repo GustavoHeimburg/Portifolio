@@ -27,10 +27,10 @@ const projects = [
         type: "WEB",
     },
     {
-        title: "Design System UI",
+        title: "Pervoi Pizzaria",
         description:
-            "Biblioteca de componentes reutilizáveis com foco em consistência e escalabilidade.",
-        tech: ["Figma", "React"],
+            "Landing page da Pervoi Pizzaria",
+        tech: ["Figma", "React", "TypeScript", "Css"],
         color: "from-pink-600 to-pink-800",
         year: "2024",
         type: "UI",
