@@ -30,7 +30,7 @@ const projects = [
         title: "Pervoi Pizzaria",
         description:
             "Landing page da Pervoi Pizzaria",
-        tech: ["Figma", "React", "TypeScript", "Css"],
+        tech: ["FIGMA", "REACT", "TYPESCRIPT", "CSS", "JAVASCRIPT"],
         color: "from-pink-600 to-pink-800",
         year: "2024",
         type: "UI",
