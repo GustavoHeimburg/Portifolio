@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    color: #0f172a;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.shape1 {
+    width: 350px;
+    height: 350px;
+    background: #60a5fa;
+    top: 10%;
+    left: 10%;
+}
+
+.shape2 {
+    width: 300px;
+    height: 300px;
+    background: #a78bfa;
+    bottom: 10%;
+    right: 10%;
+}
+
+/* ANIMAÇÕES */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes floatSlow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-floatSlow {
+    animation: floatSlow 10s ease-in-out infinite;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+section {
+    scroll-margin-top: 100px;
+}
+* {
+    transition: all 0.2s ease;
+}
+button, a {
+    cursor: pointer;
+}
