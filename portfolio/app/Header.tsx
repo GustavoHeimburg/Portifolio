@@ -8,7 +8,7 @@ export default function Header() {
             <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
 
                 <Link
-                    href="/"
+                    href="/portfolio/public"
                     className="text-lg font-semibold text-white tracking-tight hover:opacity-80 transition"
                 >
                     Gustavo.dev
