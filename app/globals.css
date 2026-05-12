@@ -1,54 +1,144 @@
 @import "tailwindcss";
 
-html, body {
-    height: 100%;
-}
+/* ========================================
+   BASE
+======================================== */
 
-body {
-    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-    color: #0f172a;
-    overflow-x: hidden;
+:root {
+    --background: #050505;
+    --foreground: #ffffff;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.bg-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.5;
-    z-index: 0;
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--foreground);
 }
 
-.shape1 {
-    width: 350px;
-    height: 350px;
-    background: #60a5fa;
-    top: 10%;
-    left: 10%;
+/* ========================================
+   BODY PREMIUM
+======================================== */
+
+body {
+    position: relative;
+    background:
+            radial-gradient(circle at top left,
+            rgba(59,130,246,0.15),
+            transparent 30%),
+
+            radial-gradient(circle at bottom right,
+            rgba(168,85,247,0.12),
+            transparent 30%),
+
+            #050505;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-.shape2 {
-    width: 300px;
-    height: 300px;
-    background: #a78bfa;
-    bottom: 10%;
-    right: 10%;
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+    background: rgba(255,255,255,0.15);
+    color: white;
 }
 
-/* ANIMAÇÕES */
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ========================================
+   GRID OVERLAY
+======================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background:
+            linear-gradient(
+                    to right,
+                    rgba(255,255,255,0.03) 1px,
+                    transparent 1px
+            ),
+
+            linear-gradient(
+                    to bottom,
+                    rgba(255,255,255,0.03) 1px,
+                    transparent 1px
+            );
+
+    background-size: 80px 80px;
+
+    mask-image: radial-gradient(
+            ellipse at center,
+            black 30%,
+            transparent 80%
+    );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ========================================
+   FLOAT ANIMATIONS
+======================================== */
+
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes floatSlow {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-28px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .animate-float {
@@ -59,37 +149,87 @@ html {
     animation: floatSlow 10s ease-in-out infinite;
 }
 
-/* ANIMAÇÃO DE ENTRADA */
-@keyframes fadeIn {
+/* ========================================
+   FADE ANIMATION
+======================================== */
+
+@keyframes fadeUp {
+
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.animate-fadeIn {
-    animation: fadeIn 0.8s ease-out;
+.animate-fade-up {
+    animation: fadeUp 1s ease forwards;
 }
+
+/* ========================================
+   REVEAL
+======================================== */
+
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: 0.6s ease;
+    transform: translateY(40px);
+    transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ========================================
+   SECTION SPACING
+======================================== */
+
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
 }
-* {
-    transition: all 0.2s ease;
-}
-button, a {
+
+/* ========================================
+   BUTTONS + LINKS
+======================================== */
+
+button,
+a {
     cursor: pointer;
+}
+
+/* ========================================
+   PREMIUM BLUR
+======================================== */
+
+.glass {
+    background: rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ========================================
+   NOISE OVERLAY
+======================================== */
+
+.noise {
+    position: fixed;
+    inset: 0;
+
+    opacity: 0.03;
+
+    background-image:
+            url("https://grainy-gradients.vercel.app/noise.svg");
+
+    pointer-events: none;
+
+    z-index: 999;
 }
