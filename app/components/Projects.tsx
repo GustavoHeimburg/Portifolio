@@ -75,7 +75,8 @@ export default function Projects() {
             className="
             relative
             max-w-7xl mx-auto
-            py-16 md:py-28
+           pt-16 md:pt-24
+            pb-8 md:pb-14
             px-6
             "
         >
