@@ -43,7 +43,7 @@ export default function Footer() {
             className="
             relative overflow-hidden
             border-t border-white/10
-            py-20 px-6 mt-32
+            py-20 px-6 mt-16 md:mt-32
             "
         >
 

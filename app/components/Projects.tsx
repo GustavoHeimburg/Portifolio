@@ -1,53 +1,70 @@
+import Image from "next/image";
+
 const projects = [
     {
         title: "Landing page LISSE LASER",
         description:
-            "Landing page premium integrada com sistema de vendas e personalização de produtos.",
+            "Landing page integrada com sistema de vendas online e edição de produtos.",
         tech: ["HTML", "CSS", "JAVASCRIPT", "PHP"],
-        color: "from-green-500/20 to-emerald-700/20",
         year: "2025",
         type: "INSTITUCIONAL",
         link: "https://lisselaser.com.br",
+        image: "/projects/lisse-saas.png",
     },
+
     {
         title: "SaaS vendas LISSE LASER",
         description:
-            "Plataforma de vendas online com gerenciamento inteligente de pedidos.",
+            "Sistema de vendas online com gerenciamento de produtos e pedidos.",
         tech: ["HTML", "TAILWIND", "JAVASCRIPT", "PHP"],
-        color: "from-blue-500/20 to-cyan-700/20",
         year: "2026",
         type: "SAAS PLATFORM",
         link: "https://lisselaser.com.br/loja.php",
+        image: "/projects/lisse-store.png",
     },
+
     {
-        title: "Carrinho LISSE LASER",
+        title: "Carrinho de vendas LISSE LASER",
         description:
-            "Checkout focado em conversão integrado ao WhatsApp.",
+            "Sistema de checkout e conversão integrado ao WhatsApp.",
         tech: ["HTML", "TAILWIND", "JAVASCRIPT", "PHP"],
-        color: "from-purple-500/20 to-fuchsia-700/20",
         year: "2026",
         type: "E-COMMERCE",
         link: "https://lisselaser.com.br/carrinho.php",
+        image: "/projects/lisse-cart.png",
     },
+
     {
         title: "Pervoi Pizzaria",
         description:
-            "Landing page moderna com identidade visual premium.",
-        tech: ["FIGMA", "TAILWIND", "TYPESCRIPT"],
-        color: "from-pink-500/20 to-rose-700/20",
+            "Landing page moderna para pizzaria com foco em identidade visual.",
+        tech: ["FIGMA", "TAILWIND CSS", "TYPESCRIPT"],
         year: "2026",
         type: "LANDING PAGE",
         link: "https://pizzariapervoi.vercel.app/",
+        image: "/projects/pervoi.png",
     },
+
+    {
+        title: "Cardápio - Pervoi Pizzaria",
+        description:
+            "Cardápio para a pizzaria Pervoi, facilitando pedidos online",
+        tech: ["FIGMA", "TAILWIND CSS", "TYPESCRIPT"],
+        year: "2026",
+        type: "LANDING PAGE",
+        link: "https://pizzariapervoi.vercel.app/cardapio",
+        image: "/projects/cardapio.png",
+    },
+
     {
         title: "Portfólio Gustavo",
         description:
-            "Experiência digital criada para apresentar projetos e posicionamento profissional.",
-        tech: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
-        color: "from-zinc-500/20 to-zinc-800/20",
+            "Portfólio desenvolvido para divulgação profissional e posicionamento digital.",
+        tech: ["NEXT.JS", "TAILWIND CSS", "TYPESCRIPT"],
         year: "2026",
         type: "PORTFÓLIO",
-        link: "https://portifolio-two-nu-28.vercel.app/",
+        link: "https://portifolio-alpha-ashen-88.vercel.app",
+        image: "/projects/portfolio.png",
     },
 ];
 
@@ -55,136 +72,139 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="relative py-40 px-6 overflow-hidden"
+            className="
+            relative
+            max-w-7xl mx-auto
+            py-16 md:py-28
+            px-6
+            "
         >
 
+            {/* HEADER */}
+            <div className="mb-10 md:mb-16">
+
+                <p
+                    className="
+                    text-sm uppercase tracking-[0.3em]
+                    text-zinc-500 mb-4
+                    "
+                >
+                    Projetos
+                </p>
+
+                <h2
+                    className="
+                    text-4xl md:text-6xl
+                    font-black
+                    tracking-[-0.05em]
+                    text-white
+                    "
+                >
+                    Alguns trabalhos
+                    <span className="block text-zinc-500">
+                        que construí.
+                    </span>
+                </h2>
+
+            </div>
+
+            {/* GRID */}
             <div
                 className="
-                absolute inset-0 opacity-[0.03]
-                bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
-                bg-[size:80px_80px]
+                grid md:grid-cols-2
+                gap-6 md:gap-10
                 "
-            />
+            >
 
-            <div
-                className="
-                absolute left-1/2 top-1/2
-                -translate-x-1/2 -translate-y-1/2
-                w-[800px] h-[800px]
-                bg-blue-500/10
-                blur-[180px]
-                rounded-full
-                "
-            />
+                {projects.map((p, i) => (
 
-            <div className="relative max-w-7xl mx-auto">
-
-                <div className="text-center mb-24">
-
-                    <div
+                    <a
+                        key={i}
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="
-                        inline-flex items-center gap-3
-                        px-5 py-2 rounded-full
-                        border border-white/10
-                        bg-white/[0.03]
-                        backdrop-blur-xl
-                        mb-8
+                        group block
                         "
                     >
 
-                        <div className="w-2 h-2 rounded-full bg-blue-400" />
-
-                        <span className="text-sm text-zinc-300 tracking-wide">
-                            Projetos selecionados
-                        </span>
-
-                    </div>
-
-                    <h2
-                        className="
-                        text-5xl md:text-7xl
-                        font-black
-                        tracking-[-0.05em]
-                        leading-[0.95]
-                        text-white
-                        "
-                    >
-
-                        Projetos que parecem
-                        <span
+                        <div
                             className="
-                            block
-                            bg-gradient-to-r
-                            from-white via-zinc-300 to-zinc-600
-                            bg-clip-text text-transparent
-                            "
-                        >
-                            produtos reais.
-                        </span>
-
-                    </h2>
-
-                </div>
-
-                <div className="grid lg:grid-cols-2 gap-8">
-
-                    {projects.map((p, i) => (
-
-                        <a
-                            key={i}
-                            href={p.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="
-                            group relative overflow-hidden
-                            rounded-3xl
+                            relative overflow-hidden
+                            rounded-[2rem]
                             border border-white/10
                             bg-white/[0.03]
                             backdrop-blur-2xl
-                            p-8
-                            transition-all duration-500
-                            hover:-translate-y-3
-                            hover:border-white/20
                             "
                         >
 
+                            {/* IMAGE */}
                             <div
-                                className={`
-                                absolute inset-0 opacity-0
-                                group-hover:opacity-100
-                                transition-opacity duration-700
-                                bg-gradient-to-br ${p.color}
-                                `}
-                            />
+                                className="
+                                relative
+                                h-[240px] md:h-[320px]
+                                overflow-hidden
+                                "
+                            >
 
-                            <div className="relative flex items-start justify-between mb-16">
+                                <Image
+                                    src={p.image}
+                                    alt={p.title}
+                                    fill
+                                    className="
+                                    object-cover
+                                    transition-transform duration-700
+                                    group-hover:scale-105
+                                    "
+                                />
 
-                                <div>
+                                {/* OVERLAY */}
+                                <div
+                                    className="
+                                    absolute inset-0
+                                    bg-gradient-to-t
+                                    from-black/80
+                                    via-black/10
+                                    to-transparent
+                                    "
+                                />
 
-                                    <span
-                                        className="
-                                        text-xs tracking-[0.3em]
-                                        uppercase text-zinc-500
-                                        "
-                                    >
-                                        {p.type}
-                                    </span>
-
+                                {/* TYPE */}
+                                <div
+                                    className="
+                                    absolute top-4 left-4
+                                    px-4 py-2 rounded-full
+                                    border border-white/10
+                                    bg-black/40
+                                    backdrop-blur-xl
+                                    text-xs text-white
+                                    tracking-wide
+                                    "
+                                >
+                                    {p.type}
                                 </div>
 
-                                <span className="text-sm text-zinc-600">
+                                {/* YEAR */}
+                                <div
+                                    className="
+                                    absolute top-5 right-5
+                                    text-sm text-zinc-300
+                                    "
+                                >
                                     {p.year}
-                                </span>
+                                </div>
 
                             </div>
 
-                            <div className="relative">
+                            {/* CONTENT */}
+                            <div className="p-6 md:p-8">
 
                                 <h3
                                     className="
-                                    text-3xl font-bold
-                                    text-white mb-5
-                                    tracking-tight
+                                    text-2xl font-bold
+                                    text-white mb-4
+                                    transition-colors duration-300
+                                    group-hover:text-zinc-300
                                     "
                                 >
                                     {p.title}
@@ -194,23 +214,29 @@ export default function Projects() {
                                     className="
                                     text-zinc-400
                                     leading-relaxed
-                                    mb-8
+                                    mb-6
                                     "
                                 >
                                     {p.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-3 mb-10">
+                                {/* TECH */}
+                                <div
+                                    className="
+                                    flex flex-wrap
+                                    gap-3 mb-8
+                                    "
+                                >
 
                                     {p.tech.map((t, index) => (
 
                                         <span
                                             key={index}
                                             className="
-                                            px-3 py-1 text-xs
-                                            rounded-full
+                                            px-4 py-2 rounded-full
                                             border border-white/10
-                                            bg-white/[0.04]
+                                            bg-white/[0.03]
+                                            text-xs tracking-wide
                                             text-zinc-300
                                             "
                                         >
@@ -221,10 +247,12 @@ export default function Projects() {
 
                                 </div>
 
+                                {/* LINK */}
                                 <div
                                     className="
-                                    flex items-center gap-2
-                                    text-white font-medium
+                                    inline-flex items-center
+                                    gap-2 text-white
+                                    font-medium
                                     "
                                 >
 
@@ -243,11 +271,11 @@ export default function Projects() {
 
                             </div>
 
-                        </a>
+                        </div>
 
-                    ))}
+                    </a>
 
-                </div>
+                ))}
 
             </div>
 

@@ -15,7 +15,7 @@ export default function Hero() {
     return (
         <section
             className="
-            relative min-h-screen
+            relative min-h-[85vh] md:min-h-screen
             pt-36 md:pt-0
             flex items-center justify-center
             overflow-hidden
