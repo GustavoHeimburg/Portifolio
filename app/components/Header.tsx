@@ -92,7 +92,7 @@ export default function Header() {
 
                 </nav>
 
-                <a
+               <a
                     href="#contact"
                     className="
                     group relative overflow-hidden

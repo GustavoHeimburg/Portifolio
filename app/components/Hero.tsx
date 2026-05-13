@@ -16,6 +16,7 @@ export default function Hero() {
         <section
             className="
             relative min-h-screen
+            pt-36 md:pt-0
             flex items-center justify-center
             overflow-hidden
             bg-[#050505]
@@ -23,6 +24,7 @@ export default function Hero() {
             "
         >
 
+            {/* GRID */}
             <div
                 className="
                 absolute inset-0 opacity-[0.03]
@@ -31,79 +33,89 @@ export default function Hero() {
                 "
             />
 
+            {/* MAIN GLOW */}
             <div
                 className="
                 absolute left-1/2 top-1/2
                 -translate-x-1/2 -translate-y-1/2
-                w-[900px] h-[900px]
+                w-[700px] md:w-[900px]
+                h-[700px] md:h-[900px]
                 bg-blue-500/10
-                blur-[180px]
-                rounded-full
-                "
-            />
-
-            <div
-                className="
-                absolute top-0 right-0
-                w-[500px] h-[500px]
-                bg-purple-500/10
                 blur-[160px]
                 rounded-full
                 "
             />
 
+            {/* SECOND GLOW */}
+            <div
+                className="
+                absolute top-0 right-0
+                w-[300px] md:w-[500px]
+                h-[300px] md:h-[500px]
+                bg-purple-500/10
+                blur-[140px]
+                rounded-full
+                "
+            />
+
+            {/* FLOATING ICONS */}
             <div className="absolute inset-0 pointer-events-none">
 
+                {/* DESKTOP ONLY */}
                 <FloatingIcon
                     icon={<FaReact />}
-                    className="top-[18%] left-[10%]"
+                    className="hidden md:block top-[18%] left-[10%]"
                     color="text-cyan-400"
                 />
 
                 <FloatingIcon
-                    icon={<SiTypescript />}
-                    className="bottom-[20%] left-[15%]"
-                    color="text-blue-500"
-                />
-
-                <FloatingIcon
                     icon={<SiTailwindcss />}
-                    className="top-[25%] right-[12%]"
+                    className="hidden md:block top-[25%] right-[12%]"
                     color="text-cyan-300"
                 />
 
                 <FloatingIcon
+                    icon={<FaCss3Alt />}
+                    className="hidden md:block top-[60%] left-[28%]"
+                    color="text-blue-400"
+                />
+
+                {/* MOBILE + DESKTOP */}
+                <FloatingIcon
+                    icon={<SiTypescript />}
+                    className="bottom-[18%] left-[8%] md:left-[15%]"
+                    color="text-blue-500"
+                />
+
+                <FloatingIcon
                     icon={<FaHtml5 />}
-                    className="bottom-[18%] right-[10%]"
+                    className="bottom-[18%] right-[8%] md:right-[10%]"
                     color="text-orange-500"
                 />
 
                 <FloatingIcon
-                    icon={<FaCss3Alt />}
-                    className="top-[60%] left-[28%]"
-                    color="text-blue-400"
-                />
-
-                <FloatingIcon
                     icon={<FaJs />}
-                    className="top-[65%] right-[25%]"
+                    className="top-[63%] right-[18%] md:right-[25%]"
                     color="text-yellow-400"
                 />
 
                 <FloatingIcon
                     icon={<SiNextdotjs />}
-                    className="top-[12%] left-1/2"
+                    className="top-[10%] left-1/2 -translate-x-1/2"
                     color="text-white"
                 />
 
             </div>
 
+            {/* CONTENT */}
             <div className="relative z-10 max-w-5xl mx-auto text-center">
 
+                {/* BADGE */}
                 <div
                     className="
                     inline-flex items-center gap-3
-                    px-5 py-2 rounded-full
+                    px-4 py-2 md:px-5 md:py-2.5
+                    rounded-full
                     border border-white/10
                     bg-white/[0.03]
                     backdrop-blur-xl
@@ -113,23 +125,34 @@ export default function Hero() {
 
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
 
-                    <span className="text-sm text-zinc-300 tracking-wide">
+                    <span
+                        className="
+                        text-xs md:text-sm
+                        text-zinc-300
+                        tracking-wide
+                        "
+                    >
                         Disponível para novos projetos
                     </span>
 
                 </div>
 
+                {/* TITLE */}
                 <h1
                     className="
-                    text-6xl md:text-8xl
+                    text-[3rem]
+                    sm:text-6xl
+                    md:text-8xl
                     font-black
-                    tracking-[-0.06em]
-                    leading-[0.9]
+                    tracking-[-0.07em]
+                    leading-[0.98]
+                    md:leading-[0.9]
                     text-white
                     "
                 >
 
                     Construindo
+
                     <span
                         className="
                         block
@@ -141,42 +164,49 @@ export default function Hero() {
                         experiências digitais
                     </span>
 
-                    <span className="block mt-2">
+                    <span className="block mt-1 md:mt-2">
                         absurdamente modernas.
                     </span>
 
                 </h1>
 
+                {/* DESCRIPTION */}
                 <p
                     className="
-                    mt-10
+                    mt-6 md:mt-10
                     text-zinc-400
-                    text-lg md:text-xl
-                    max-w-2xl mx-auto
+                    text-sm md:text-xl
+                    max-w-md md:max-w-2xl
                     leading-relaxed
+                    mx-auto
+                    px-2
                     "
                 >
 
-                    Desenvolvimento frontend premium focado em
-                    performance, design sofisticado e experiências
-                    que realmente impressionam.
+                    Desenvolvimento frontend premium focado
+                    em performance, design sofisticado e
+                    experiências que realmente impressionam.
 
                 </p>
 
+                {/* BUTTONS */}
                 <div
                     className="
-                    mt-14
-                    flex flex-wrap
+                    mt-12 md:mt-14
+                    flex flex-col sm:flex-row
                     items-center justify-center
-                    gap-5
+                    gap-4 md:gap-5
                     "
                 >
 
+                    {/* PRIMARY */}
                     <a
                         href="#projects"
                         className="
                         group relative overflow-hidden
-                        px-8 py-4 rounded-full
+                        w-full sm:w-auto
+                        px-8 py-4
+                        rounded-full
                         bg-white text-black
                         font-semibold
                         transition-all duration-300
@@ -184,7 +214,7 @@ export default function Hero() {
                         "
                     >
 
-                        <span className="relative z-10 flex items-center gap-2">
+                        <span className="relative z-10 flex items-center justify-center gap-2">
 
                             Ver projetos
 
@@ -211,16 +241,20 @@ export default function Hero() {
 
                     </a>
 
+                    {/* SECONDARY */}
                     <a
                         href="#contact"
                         className="
-                        px-8 py-4 rounded-full
+                        w-full sm:w-auto
+                        px-8 py-4
+                        rounded-full
                         border border-white/10
                         bg-white/[0.03]
                         backdrop-blur-xl
                         text-white
                         hover:bg-white/[0.06]
                         transition-all duration-300
+                        text-center
                         "
                     >
                         Falar comigo
@@ -229,6 +263,7 @@ export default function Hero() {
                 </div>
 
             </div>
+
         </section>
     );
 }
@@ -246,7 +281,8 @@ function FloatingIcon({
         <div
             className={`
             absolute ${className}
-            text-5xl ${color}
+            text-4xl md:text-5xl
+            ${color}
             opacity-70
             animate-float
             `}
