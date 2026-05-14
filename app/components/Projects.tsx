@@ -131,11 +131,27 @@ export default function Projects() {
 
                         <div
                             className="
-                            relative overflow-hidden
+                          relative overflow-hidden
                             rounded-[2rem]
-                            border border-white/10
-                            bg-white/[0.03]
+                            border border-white/15
+
+                            bg-gradient-to-b
+                            from-white/[0.07]
+                            to-white/[0.03]
+
                             backdrop-blur-2xl
+
+                            transition-all duration-500
+                            hover:-translate-y-2
+                            hover:border-white/25
+                            hover:shadow-[0_0_50px_rgba(255,255,255,0.05)]
+
+                            before:absolute
+                            before:inset-0
+                            before:bg-gradient-to-b
+                            before:from-white/[0.03]
+                            before:to-transparent
+                            before:pointer-events-none
                             "
                         >
 
@@ -164,8 +180,8 @@ export default function Projects() {
                                     className="
                                     absolute inset-0
                                     bg-gradient-to-t
-                                    from-black/80
-                                    via-black/10
+                                   from-black/50
+                                   via-black/20
                                     to-transparent
                                     "
                                 />
@@ -236,7 +252,9 @@ export default function Projects() {
                                             className="
                                             px-4 py-2 rounded-full
                                             border border-white/10
-                                            bg-white/[0.03]
+                                            bg-gradient-to-b
+                                            from-white/[0.07]
+                                            to-white/[0.03]
                                             text-xs tracking-wide
                                             text-zinc-300
                                             "

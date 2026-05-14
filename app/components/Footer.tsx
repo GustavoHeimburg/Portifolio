@@ -41,10 +41,11 @@ export default function Footer() {
     return (
         <footer
             className="
-            relative overflow-hidden
-            border-t border-white/10
-            py-20 px-6 mt-16 md:mt-32
-            "
+    relative overflow-hidden
+    border-t border-white/5
+    py-12 md:py-16
+    px-6
+    "
         >
 
             <div
