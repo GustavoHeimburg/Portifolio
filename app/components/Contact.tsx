@@ -2,7 +2,11 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="relative overflow-hidden py-40 px-6"
+            className="
+relative overflow-hidden
+py-20 md:py-28
+px-6
+"
         >
 
             <div className="absolute inset-0 opacity-[0.03]
@@ -28,7 +32,7 @@ export default function Contact() {
 
                 </div>
 
-                <h2 className="text-5xl md:text-7xl font-black leading-[0.95]
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95]
                 tracking-[-0.05em] text-white mb-8">
 
                     Vamos criar algo
@@ -41,9 +45,9 @@ export default function Contact() {
 
                 </h2>
 
-                <p className="max-w-2xl mx-auto text-lg text-zinc-400 leading-relaxed mb-14">
+                <p className="max-w-2xl mx-auto text-base md:text-lg text-zinc-400 leading-relaxed mb-14">
 
-                    Se você quer um site moderno, rápido e com aparência premium,
+                    Se você quer um site moderno, rápido e com aparência moderna,
                     eu posso transformar sua ideia em uma experiência digital
                     de alto nível.
 
@@ -92,14 +96,6 @@ export default function Contact() {
                     >
                         Enviar e-mail
                     </a>
-
-                </div>
-
-                <div className="mt-20">
-
-                    <p className="text-zinc-600 text-sm tracking-wide">
-                        Desenvolvido com obsessão por design, performance e detalhes.
-                    </p>
 
                 </div>
 

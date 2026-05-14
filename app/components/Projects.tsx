@@ -4,10 +4,10 @@ const projects = [
     {
         title: "Landing page LISSE LASER",
         description:
-            "Landing page integrada com sistema de vendas online e edição de produtos.",
+            "Landing page integrada com sistema de vendas e edição de produtos.",
         tech: ["HTML", "CSS", "JAVASCRIPT", "PHP"],
         year: "2025",
-        type: "INSTITUCIONAL",
+        type: "LANDING PAGE",
         link: "https://lisselaser.com.br",
         image: "/projects/lisse-saas.png",
     },
@@ -59,7 +59,7 @@ const projects = [
     {
         title: "Portfólio Gustavo",
         description:
-            "Portfólio desenvolvido para divulgação profissional e posicionamento digital.",
+            "Portfólio desenvolvido para divulgação profissional.",
         tech: ["NEXT.JS", "TAILWIND CSS", "TYPESCRIPT"],
         year: "2026",
         type: "PORTFÓLIO",

@@ -47,7 +47,6 @@ export default function Footer() {
             "
         >
 
-            {/* GRID */}
             <div
                 className="
                 absolute inset-0 opacity-[0.03]
@@ -56,7 +55,6 @@ export default function Footer() {
                 "
             />
 
-            {/* GLOW */}
             <div
                 className="
                 absolute left-1/2 top-0
@@ -70,7 +68,6 @@ export default function Footer() {
 
             <div className="relative max-w-7xl mx-auto">
 
-                {/* TOP */}
                 <div
                     className="
                     flex flex-col lg:flex-row
@@ -79,8 +76,6 @@ export default function Footer() {
                     gap-16
                     "
                 >
-
-                    {/* LEFT */}
                     <div className="max-w-md">
 
                         <div className="flex items-center gap-3 mb-5">
@@ -111,14 +106,13 @@ export default function Footer() {
                             leading-relaxed
                             "
                         >
-                            Desenvolvimento frontend premium focado
+                            Desenvolvimento frontend atual focado
                             em experiências digitais modernas,
                             rápidas e visualmente impactantes.
                         </p>
 
                     </div>
 
-                    {/* CENTER */}
                     <nav
                         className="
                         flex flex-wrap items-center
@@ -204,7 +198,7 @@ export default function Footer() {
                 >
 
                     <p className="text-zinc-600 text-sm text-center md:text-left">
-                        © 2026 Gustavo.dev — Todos os direitos reservados.
+                        © 2026 Gustavo Heimburg — Todos os direitos reservados.
                     </p>
 
                     <p className="text-zinc-700 text-sm text-center md:text-right">
