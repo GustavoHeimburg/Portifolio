@@ -74,7 +74,7 @@ const projects = [
         tech: ["NEXT.JS", "TAILWIND CSS", "TYPESCRIPT"],
         year: "2026",
         type: "PORTFÓLIO",
-        link: "https://portifolio-alpha-ashen-88.vercel.app",
+        link: "cyber-lab-psi.vercel.app",
         image: "/projects/cyber.png",
     },
 ];
