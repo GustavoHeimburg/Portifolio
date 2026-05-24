@@ -75,7 +75,7 @@ const projects = [
         year: "2026",
         type: "PORTFÓLIO",
         link: "https://cyber-lab-psi.vercel.app",
-        image: "/projects/cyber.png",
+        image: "/projects/cyber2.png",
     },
 ];
 
