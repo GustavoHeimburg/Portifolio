@@ -66,6 +66,17 @@ const projects = [
         link: "https://portifolio-alpha-ashen-88.vercel.app",
         image: "/projects/portfolio.png",
     },
+
+    {
+        title: "CyberLab landing Page",
+        description:
+            "Landing page para CyberLab, empresa de segurança online.",
+        tech: ["NEXT.JS", "TAILWIND CSS", "TYPESCRIPT"],
+        year: "2026",
+        type: "PORTFÓLIO",
+        link: "https://portifolio-alpha-ashen-88.vercel.app",
+        image: "/projects/cyber.png",
+    },
 ];
 
 export default function Projects() {
@@ -81,7 +92,7 @@ export default function Projects() {
             "
         >
 
-            {/* HEADER */}
+
             <div className="mb-10 md:mb-16">
 
                 <p
