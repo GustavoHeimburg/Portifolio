@@ -39,7 +39,6 @@ export default function Hero() {
                 "
             />
 
-            {/* MAIN GLOW */}
             <div
                 className="
                 absolute left-1/2 top-1/2
@@ -53,7 +52,6 @@ export default function Hero() {
                 "
             />
 
-            {/* SECOND GLOW */}
             <div
                 className="
                 absolute top-0 right-0
@@ -66,10 +64,8 @@ export default function Hero() {
                 "
             />
 
-            {/* FLOATING ICONS */}
             <div className="absolute inset-0 pointer-events-none">
 
-                {/* DESKTOP */}
                 <FloatingIcon
                     icon={<FaReact />}
                     className="hidden md:block top-[18%] left-[10%]"
@@ -154,7 +150,6 @@ export default function Hero() {
 
                 </div>
 
-                {/* TITLE */}
                 <h1
                     className="
                     text-[2.7rem]
@@ -187,7 +182,6 @@ export default function Hero() {
 
                 </h1>
 
-                {/* DESCRIPTION */}
                 <p
                     className="
                     mt-5

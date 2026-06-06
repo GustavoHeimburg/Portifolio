@@ -5,7 +5,7 @@ const projects = [
         title: "Landing page LISSE LASER",
         description:
             "Landing page integrada com sistema de vendas e edição de produtos.",
-        tech: ["HTML", "CSS", "JAVASCRIPT", "PHP"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "TAILWIND CSS"],
         year: "2025",
         type: "LANDING PAGE",
         link: "https://lisselaser.com.br",
@@ -32,6 +32,17 @@ const projects = [
         type: "E-COMMERCE",
         link: "https://lisselaser.com.br/carrinho.php",
         image: "/projects/lisse-cart.png",
+    },
+
+    {
+        title: "Painel ADM Lisse laser",
+        description:
+            "Painel administrador para edição, criação, exclusão, restauração e alteração de produtos da loja",
+        tech: ["HTML", "TAILWIND", "JAVASCRIPT", "PHP"],
+        year: "2026",
+        type: "PAINEL ADM",
+        link: "https://lisselaser.com.br/admin/painel.php",
+        image: "/projects/paineladm.png",
     },
 
     {
@@ -77,6 +88,7 @@ const projects = [
         link: "https://cyber-lab-psi.vercel.app",
         image: "/projects/cyber2.png",
     },
+
 ];
 
 export default function Projects() {
