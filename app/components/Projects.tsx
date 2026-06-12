@@ -132,7 +132,6 @@ export default function Projects() {
 
             </div>
 
-            {/* GRID */}
             <div
                 className="
                 grid md:grid-cols-2
